@@ -50,7 +50,7 @@ public class LocalFileActivity extends Activity implements OnClickListener {
 		LinearLayout ll = (LinearLayout) findViewById(R.id.linear_layout3);
 		ll.addView(mAdView);
 		AdRequest adRequest = new AdRequest.Builder().addTestDevice(
-				"2D6B2CDFA13324C63449E43857621522").build();
+				"F3B1B2779DEF816F9B31AA6C6DC57C3F").build();
 		mAdView.loadAd(adRequest);
 	}
 
@@ -62,6 +62,9 @@ public class LocalFileActivity extends Activity implements OnClickListener {
 		for (int i = filesStr.length - 1; i >= 0; i--) {
 			String s = filesStr[i];
 			if (s.equals(MainActivity.FILE_NAME)) {
+				continue;
+			}
+			if (!s.substring(0, 3).equals("MC_")) {
 				continue;
 			}
 			fileTitle = " " + s.substring(3, 7) + "/" + s.substring(7, 9) + "/"
