@@ -199,7 +199,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 			// ’Ç‹L‚·‚é
 			for (int i : kind) {
 				writer.append(i + "," + data.get(i).num + "," + data.get(i).sum
-						+ System.lineSeparator());
+						+ System.getProperty("line.separator"));
 			}
 			writer.close();
 		} catch (IOException e) {
@@ -406,7 +406,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 							for (int i : kind) {
 								pw.append(i + "," + data.get(i).num + ","
 										+ data.get(i).sum
-										+ System.lineSeparator());
+										+ System.getProperty("line.separator"));
 							}
 							pw.flush();
 							Toast.makeText(MainActivity.this,
@@ -463,7 +463,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 					Toast.makeText(
 							this,
 							getString(R.string.opend_file)
-									+ System.lineSeparator()
+									+ System.getProperty("line.separator")
 									+ data.getStringExtra("file_title"),
 							Toast.LENGTH_LONG).show();
 				} catch (Exception e) {
